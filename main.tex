@@ -1,0 +1,96 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage[
+backend=biber, 
+bibencoding=utf8,
+style=ieee, 
+sorting=ynt, 
+natbib=true, 
+doi=false, 
+isbn=false, 
+url=false, 
+eprint=false, 
+maxcitenames=1, 
+mincitenames=1,
+]{biblatex}
+
+\bibliography{biblio}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%reduce spacing after quote
+ \patchcmd{\makecvhead}%
+ {\hfill\null\\[2.5em]}%
+ {\hfill\null\\[1em]}%
+ {}%
+ {}%
+
+% personal data
+\name{Johann}{Laconte}
+\title{Ph.D. Student, Post-Doc Applicant}                               % optional, remove / comment the line if not wanted
+\address{08 rue d'Assas}{63000 Clermont-Ferrand}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{(+33)7 82 21 02 20}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{laconte.johann@gmail.com}                               % optional, remove / comment the line if not wanted
+
+\extrainfo{Updated on \today}                 % optional, remove / comment the line if not wanted
+
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+%\quote{I like robots. \\ My research interests are Robotics; Intelligent Vehicles; Risk Assessment; Applied Mathematics; Mapping}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2018--2021}{Ph.D. in Robotics}{Clermont Auvergne University (UCA), Laval University}{}{}{Theoretical framework for risk assessment in occupancy grids \\ \textbf{Supervisors:} Romuald Aufrère (UCA), François Pomerleau (Laval University), Roland Chapuis (UCA), Christophe Debain (National Research Institute for Agriculture, Food and the Environment)}  % arguments 3 to 6 can be left empty
+\cventry{2017--2018}{Master Degree in Robotics}{Clermont Auvergne University}{}{}{Ranked first of the class.}
+\cventry{2015--2018}{Engineering Degree in Computer Science and Modeling}{Institut Supérieur d'Informatique, de Modélisation et de leurs Applications}{}{}{Ranked second of the class}
+
+\section{Professional activities}
+\cventry{2020}{Reviewing Services}{}{}{}{
+	Reviewing of 3 conference papers and 1 journal paper.
+}
+\cventry{2020}{Research Internship}{Laval University}{Quebec City, Canada}{}{
+	Collaboration with the Northern Robotics Laboratory (Norlab), leading to the publications of \citet{baril2020evaluation}, \citet{vaidis2020improving}.
+}
+\cventry{2019}{Winter School}{National Institute for Research in Digital Science and Technology (INRIA)}{Sophia Antipolis, France}{}{
+	One week winter school covering the basic in both mobile and manipulative robotics.
+}
+\cventry{2018}{Research Internship}{Laval University}{Quebec City, Canada}{}{
+	Investigation of the measurements bias coming from a Light Detection and Ranging (lidar) sensor.
+	Modeling of the return waveform and design of an experimental setup.
+Results of the internship were published to the 2019 International Conference on Robotics and Automation (ICRA19).
+}
+\cventry{2017}{Internship}{Thales}{Elancourt, France}{}{
+Evaluations and improvements of state-of-the-art LIDAR Simultaneous Localization And Mapping (SLAM) algorithms.
+}
+
+\section{Grants and Distinctions}
+\cventry{2020}{Best Robot Vision Paper Award}{Conference on Robots and Vision (CRV)}{}{}{For the paper \fullcite{baril2020evaluation}}
+\cventry{2020}{Finalist for Best Student Paper Award}{International Conference on Control, Automation, Robotics and Vision (ICARCV)}{}{}{For the paper \fullcite{kasmi2020information}}
+\cventry{2018}{Doctoral Research Grant}{\textit{Innovative Mobility: Smart and Sustainable Solutions (IMOBS3) Program}}{}{}{}
+\cventry{2018}{Graduate Research Grant}{\textit{WOW! Wide Open to the World Program}}{}{}{}
+
+\section{Languages}
+\cvdoubleitem{\textbf{English}}{Fluent, TOEIC certificate}{\textbf{French}}{Native Speaker}
+\cvdoubleitem{\textbf{Chinese}}{Basic Level, HSK2 certificate}{\textbf{German}}{Notions}
+
+\section{Teaching}
+\cventry{2018--2021}{Digital Signal Processing}{\textit{Graduate course}}{}{}{Graduate course about Discrete Fourier Transform, Z-Transform, Signal Filtering and their applications.}
+\cventry{2018--2021}{Control Theory}{\textit{Graduate course}}{}{}{Graduate course about Laplace transform, regulation, modeling and analysis of continuous systems.}
+\cventry{2018--2021}{Projects Supervision}{\textit{Graduate students}}{}{}{Supervision of four robotics graduate projects of 60 or 120 hours.}
+\cventry{2020}{Internship Mentoring}{Ph.D. candidate student}{}{}{Mentoring of a graduate student working on path-planning algorithms.}
+
+\renewcommand{\refname}{Scientific Publications}
+\nocite{*}
+\printbibliography
+\end{document}
