@@ -1928,8 +1928,10 @@
     <bcf:citekey order="2">baril2020evaluation</bcf:citekey>
     <bcf:citekey order="3">vaidis2020improving</bcf:citekey>
     <bcf:citekey order="4">vaidis2020improving</bcf:citekey>
-    <bcf:citekey order="5">baril2020evaluation</bcf:citekey>
-    <bcf:citekey order="6">kasmi2020information</bcf:citekey>
+    <bcf:citekey order="5">laconte2019lidar</bcf:citekey>
+    <bcf:citekey order="6">laconte2019lidar</bcf:citekey>
+    <bcf:citekey order="7">baril2020evaluation</bcf:citekey>
+    <bcf:citekey order="8">kasmi2020information</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
